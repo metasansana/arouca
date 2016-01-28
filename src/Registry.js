@@ -4,7 +4,8 @@ import HotRoute from './HotRoute';
 
 /**
  * Registry for Routes
- * @param {Router} router 
+ * @param {Router} router The main router
+ *
  * @property {array<Route>} routes - A list of all the routes registered here.
  */
 class Registry {
@@ -18,7 +19,7 @@ class Registry {
      * regex produces a RegExp object from a path string
      * @param {string} str 
      * @param {array} keys An array that stores information regarding ':var' parameters in the path.
-     * @return RegExp} description
+     * @return {RegExp} description
      */
     regex(str, keys) {
         return mukalukoxs(str, keys);
@@ -34,8 +35,8 @@ class Registry {
 
         var keys = [];
 
-        if(path === null)
-          return this.routes.push(new HotRoute(cb));
+        if (path === null)
+            return this.routes.push(new HotRoute(cb));
 
         this.routes.push(new Route(this.regex(path, keys), keys, cb));
 
@@ -56,7 +57,7 @@ class Registry {
             if (err) return router.emit('error', err);
 
             if (pending.length !== 0)
-                pending.shift().activate(path, query, next);
+                pending.shift().activate(path, query, next, this._router);
 
         };
 

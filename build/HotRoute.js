@@ -15,7 +15,9 @@ var _Request = require('./Request');
 var _Request2 = _interopRequireDefault(_Request);
 
 /**
- * HotRoute 
+ * HotRoute is used for routes that are to be activated regardless of 
+ * the current path.
+ * @implements {Routable}
  * @param {function} cb 
  */
 
@@ -28,9 +30,9 @@ var HotRoute = (function () {
 
     _createClass(HotRoute, [{
         key: 'activate',
-        value: function activate(path, query, next) {
+        value: function activate(path, query, next, router) {
 
-            this.cb(_Request2['default'].create(path, query, [], []), {}, next);
+            this.cb(_Request2['default'].create(path, query, [], []), {}, next, router);
         }
     }]);
 

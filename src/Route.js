@@ -1,6 +1,9 @@
 import Request from './Request';
+import Response from './Response';
+
 /**
- * Route
+ * Route is used for routes we check the path against a regular expression before executing.
+ * @implements {Routable}
  * @param {RegExp} regex 
  * @param {array<object>} keys 
  * @param {handler} handler 
@@ -13,13 +16,7 @@ class Route {
         this._handler = handler;
     }
 
-    /**
-     * activate this Route. Only happens if the path matches.
-     * @param {string} path 
-     * @param {string} query 
-     * @param {function} next
-     */
-    activate(path, query, next) {
+    activate(path, query, next, router) {
 
         var result = this.regex.exec(path);
 
@@ -30,7 +27,7 @@ class Route {
             Request.create(path,
                 query,
                 this.keys,
-                result), {}, next);
+                result), new Response(router), next);
 
     }
 }

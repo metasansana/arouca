@@ -23,15 +23,17 @@ var _events = require('events');
 var _events2 = _interopRequireDefault(_events);
 
 /**
- * Call when a route has been navigated to.
- * @callback
+ * Called when a Route has been activated.
+ * @callback handler
  * @param {Request} req 
- * @param {Response} res
- * @param {function} next 
+ * @param {Response} res 
+ * @param {function} next
  */
 
 /**
  * Router provides an api for executing code when the browser hash changes.
+ * It does this by listening for a 'hashchange' event. Add an instance
+ * of Router with `window.addEventListener` to get to work.
  */
 
 var Router = (function () {
@@ -56,6 +58,13 @@ var Router = (function () {
         value: function on() {
 
             this._events.on.apply(this._events, arguments);
+            return this;
+        }
+    }, {
+        key: 'once',
+        value: function once() {
+
+            this._events.once.apply(this._events, arguments);
             return this;
         }
     }, {

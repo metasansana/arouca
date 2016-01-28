@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Class: Registry</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Class: Registry</h1>
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2>Registry</h2>
+        
+            <div class="class-description">Registry for Routes</div>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+    
+    <h2>Constructor</h2>
+    
+
+    <h4 class="name" id="Registry"><span class="type-signature"></span>new Registry<span class="signature">(router)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>router</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Router.html">Router</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">The main router</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    
+
+<table class="props">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>routes</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">array.&lt;<a href="Route.html">Route</a>></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">A list of all the routes registered here.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Registry.js.html">Registry.js</a>, <a href="Registry.js.html#line11">line 11</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    </div>
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id="regex"><span class="type-signature"></span>regex<span class="signature">(str, keys)</span><span class="type-signature"> &rarr; {RegExp}</span></h4>
+
+    
+
+
+
+<div class="description">
+    regex produces a RegExp object from a path string
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>str</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>keys</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">array</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">An array that stores information regarding ':var' parameters in the path.</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Registry.js.html">Registry.js</a>, <a href="Registry.js.html#line24">line 24</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    description
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">RegExp</span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="register"><span class="type-signature"></span>register<span class="signature">(path, cb)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    register a handler for a route
+If the path has a Route already registered for its id, no new object is created.
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>path</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>cb</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="global.html#handler">handler</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Registry.js.html">Registry.js</a>, <a href="Registry.js.html#line34">line 34</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+            
+
+    
+
+    <h4 class="name" id="run"><span class="type-signature"></span>run<span class="signature">(path, query)</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+<div class="description">
+    run attempts to activate the routes stored in the registry
+</div>
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>path</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>query</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+<dl class="details">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="Registry.js.html">Registry.js</a>, <a href="Registry.js.html#line50">line 50</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="HotRoute.html">HotRoute</a></li><li><a href="Registry.html">Registry</a></li><li><a href="Request.html">Request</a></li><li><a href="Response.html">Response</a></li><li><a href="Route.html">Route</a></li><li><a href="Router.html">Router</a></li></ul><h3>Interfaces</h3><ul><li><a href="Routable.html">Routable</a></li></ul><h3><a href="global.html">Global</a></h3>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.4.0-dev</a> on Thu Jan 28 2016 12:39:55 GMT-0400 (AST)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

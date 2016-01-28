@@ -1,14 +1,13 @@
 {
     "name": "arouca",
-    "version": "0.0.2",
+    "version": "0.0.1",
     "description": "Simple client side router with express like features.",
     "main": "build/index.js",
     "files": ["build"],
     "scripts": {
-        "test": "./node_modules/.bin/mocha --opts mocha.opts test",
-        "api-docs": "rm -R docs/api; node_modules/.bin/jsdoc -c jsdoc.json",
+        "docs": "rm -R docs; node_modules/.bin/jsdoc -c jsdoc.json",
         "prepublish": "./node_modules/.bin/babel -D src -d build",
-        "zuul": "./node_modules/.bin/zuul --local 4000 -- test/*.js"
+        "test": "./node_modules/.bin/zuul --local 4000 -- test/*.js"
     },
     "author": "Lasana Murray <lmurray@quenk.com> (http://quenk.com)",
     "license": "Apache-2.0",

@@ -24,7 +24,8 @@ var _HotRoute2 = _interopRequireDefault(_HotRoute);
 
 /**
  * Registry for Routes
- * @param {Router} router 
+ * @param {Router} router The main router
+ *
  * @property {array<Route>} routes - A list of all the routes registered here.
  */
 
@@ -40,7 +41,7 @@ var Registry = (function () {
      * regex produces a RegExp object from a path string
      * @param {string} str 
      * @param {array} keys An array that stores information regarding ':var' parameters in the path.
-     * @return RegExp} description
+     * @return {RegExp} description
      */
 
     _createClass(Registry, [{
@@ -74,6 +75,7 @@ var Registry = (function () {
     }, {
         key: 'run',
         value: function run(path, query) {
+            var _this = this;
 
             var pending = this.routes.slice();
             var next;
@@ -82,7 +84,7 @@ var Registry = (function () {
 
                 if (err) return router.emit('error', err);
 
-                if (pending.length !== 0) pending.shift().activate(path, query, next);
+                if (pending.length !== 0) pending.shift().activate(path, query, next, _this._router);
             };
 
             return next();

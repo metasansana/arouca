@@ -14,8 +14,13 @@ var _Request = require('./Request');
 
 var _Request2 = _interopRequireDefault(_Request);
 
+var _Response = require('./Response');
+
+var _Response2 = _interopRequireDefault(_Response);
+
 /**
- * Route
+ * Route is used for routes we check the path against a regular expression before executing.
+ * @implements {Routable}
  * @param {RegExp} regex 
  * @param {array<object>} keys 
  * @param {handler} handler 
@@ -30,22 +35,15 @@ var Route = (function () {
         this._handler = handler;
     }
 
-    /**
-     * activate this Route. Only happens if the path matches.
-     * @param {string} path 
-     * @param {string} query 
-     * @param {function} next
-     */
-
     _createClass(Route, [{
         key: 'activate',
-        value: function activate(path, query, next) {
+        value: function activate(path, query, next, router) {
 
             var result = this.regex.exec(path);
 
             if (result === null) return next(path, query, next);
 
-            this._handler(_Request2['default'].create(path, query, this.keys, result), {}, next);
+            this._handler(_Request2['default'].create(path, query, this.keys, result), new _Response2['default'](router), next);
         }
     }]);
 
