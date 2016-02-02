@@ -54,7 +54,7 @@ class Registry {
 
         next = err => {
 
-            if (err) return router.emit('error', err);
+            if (err) return this._router.emit('error', err);
 
             if (pending.length !== 0)
                 pending.shift().activate(path, query, next, this._router);

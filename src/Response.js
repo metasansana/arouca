@@ -14,7 +14,7 @@ class Response {
      * @param {object} locals 
      */
     render(view, locals) {
-      this._router.emit(view, locals);
+        this._router.emit('render', view, locals);
     }
 
 }

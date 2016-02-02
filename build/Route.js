@@ -41,7 +41,7 @@ var Route = (function () {
 
             var result = this.regex.exec(path);
 
-            if (result === null) return next(path, query, next);
+            if (result === null) return next();
 
             this._handler(_Request2['default'].create(path, query, this.keys, result), new _Response2['default'](router), next);
         }

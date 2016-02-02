@@ -21,7 +21,7 @@ class Route {
         var result = this.regex.exec(path);
 
         if (result === null)
-            return next(path, query, next);
+            return next();
 
         this._handler(
             Request.create(path,
