@@ -8,7 +8,7 @@
   ],
   "scripts": {
     "docs": "rm -R docs; node_modules/.bin/jsdoc -c jsdoc.json",
-    "build": "./node_modules/.bin/babel -D src -d lib",
+    "build": "./node_modules/.bin/babel -D src -s inline -d lib",
     "test": "./node_modules/.bin/zuul --local 4000 -- test/*.js"
   },
   "author": "Lasana Murray <lmurray@quenk.com> (http://quenk.com)",
@@ -26,6 +26,7 @@
     "zuul": "^3.10.1"
   },
   "dependencies": {
+    "path-to-regexp": "^1.5.1",
     "qs": "^5.2.0"
   },
   "keywords": [

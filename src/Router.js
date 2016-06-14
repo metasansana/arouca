@@ -62,7 +62,8 @@ class Router {
      */
     get(path, cb) {
 
-        this.registry.register(path, cb);
+        this.registry.register(path, (typeof cb === 'object') ?
+            cb.onActive.bind(cb) : cb);
         return this;
 
     }
@@ -73,7 +74,8 @@ class Router {
      */
     use(cb) {
 
-        this.registry.register(null, cb);
+        this.registry.register(null, (typeof cb === 'object') ?
+            cb.onActive.bind(cb) : cb);
 
     }
 

@@ -38,6 +38,7 @@ var _events2 = _interopRequireDefault(_events);
 
 var Router = (function () {
     function Router() {
+        console.log('this is ', this, ', instance of is ', Route);
         _classCallCheck(this, Router);
 
         this.registry = new _Registry2['default'](this);

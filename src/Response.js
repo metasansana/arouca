@@ -9,6 +9,17 @@ class Response {
     }
 
     /**
+     * redirect changes the route via updating the hash.
+     * @param {string} path 
+     * @returns {Response}
+     */
+    redirect(path) {
+
+      window.location.hash = path;
+
+    }
+
+    /**
      * render triggers a view event so code elsewhere can render a view
      * @param {string} view 
      * @param {object} locals 
