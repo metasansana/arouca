@@ -1,0 +1,1 @@
+{"version":3,"sources":["../src/index.js"],"names":[],"mappings":";;;;;;;AAAA;;;;;;QAEkB,M","file":"index.js","sourcesContent":["import Router from './Router';\n\nexport {Router as Router};\n"]}

@@ -19,4 +19,5 @@ class HotRoute {
     }
 
 }
+
 export default HotRoute
