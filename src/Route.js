@@ -4,9 +4,9 @@ import Response from './Response';
 /**
  * Route is used for routes we check the path against a regular expression before executing.
  * @implements {Routable}
- * @param {RegExp} regex 
- * @param {array<object>} keys 
- * @param {handler} handler 
+ * @param {RegExp} regex
+ * @param {array<object>} keys
+ * @param {handler} handler
  */
 class Route {
 
