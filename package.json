@@ -1,6 +1,6 @@
 {
   "name": "piarco",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Simple client side router with express like features.",
   "main": "build/index.js",
   "files": [
