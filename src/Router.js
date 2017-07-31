@@ -82,6 +82,8 @@ class Router {
     this.registry.register(null, (typeof cb === 'object') ?
       cb.onActive.bind(cb) : cb);
 
+    return this;
+
   }
 
 }
