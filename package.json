@@ -1,5 +1,5 @@
 {
-  "name": "arouca",
+  "name": "piarco",
   "version": "0.1.0",
   "description": "Simple client side router with express like features.",
   "main": "build/index.js",
