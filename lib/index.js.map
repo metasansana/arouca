@@ -1,1 +1,1 @@
-{"version":3,"sources":["../src/index.js"],"names":[],"mappings":";;;;;;;AAAA;;;;;;QAEkB,M;QACC,O,GAAX,O","file":"index.js","sourcesContent":["import Router from './Router';\n\nexport {Router as Router};\nexport {Request as Request}\n"]}
+{"version":3,"sources":["../src/index.js"],"names":[],"mappings":";;;;;;;AAAA;;;;AACA;;;;;;QAEkB,M;QACC,O","file":"index.js","sourcesContent":["import Router from './Router';\nimport Request from './Request';\n\nexport {Router as Router};\nexport {Request as Request}\n"]}

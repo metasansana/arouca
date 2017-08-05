@@ -3,6 +3,7 @@
   "version": "0.1.2",
   "description": "Simple client side router with express like features.",
   "main": "lib/index.js",
+  "types":"lib/index.d.ts",
   "files": [
     "lib"
   ],
